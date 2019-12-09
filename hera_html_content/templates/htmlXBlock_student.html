@@ -1,0 +1,25 @@
+
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-8">
+      {% if image_url != '' %}
+            <img src="{{ image_url }}" class="card-img" alt="...">
+        {% else %}
+            <iframe 
+                height="100%"
+                src="{{ iframe_url }}"
+                frameborder="0"
+                style="display: block; position: absolute; width: 100%; height: 730px;"
+                webkitallowfullscreen=""
+                mozallowfullscreen=""
+                allowfullscreen="">
+            </iframe>
+        {% endif %}
+    </div>
+    <div class="col-md-4">
+      <div class="card-body">
+        {{ data|safe }}
+      </div>
+    </div>
+  </div>
+</div>

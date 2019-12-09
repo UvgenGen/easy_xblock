@@ -1,0 +1,51 @@
+<div class="wrapper-comp-settings editor-with-buttons is-active" id="settings-tab">
+    <ul class="list-input settings-list">
+
+        <li class="field comp-setting-entry is-set">
+        <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="display-name">  "Display Name" </label>
+            <input class="input setting-input" id="display-name" value="{{ display_name }}" type="text">
+        </div>
+        <span class="tip setting-help"> Display Name </span>
+        </li>
+
+        <li class="field comp-setting-entry is-set">
+        <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="image-url">  "image_url" </label>
+            <input class="input setting-input" id="image-url" value="{{ image_url }}" type="text">
+        </div>
+        <span class="tip setting-help">  "image_url"</span>
+        </li>
+
+        <li class="field comp-setting-entry is-set">
+        <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="iframe-url">  "iframe_url" </label>
+            <input class="input setting-input" id="iframe-url" value="{{ iframe_url }}" type="text">
+        </div>
+        <span class="tip setting-help">  "iframe_url"</span>
+        </li>
+
+        <li class="field comp-setting-entry is-set">
+        <div class="wrapper-comp-setting">
+            <label class="label setting-label" for="html-content">  "Text" </label>
+            <textarea name="html-content" id="html-content" class="summernote" cols="40" rows="10">
+            {% if data %}
+                {{ data }}
+            {% else %}
+                Enter text
+            {% endif %}</textarea>
+        </div>
+        <span class="tip setting-help"> "Text" </span>
+        </li>
+    </ul>
+    <div class="xblock-actions">
+        <ul>
+            <li class="action-item">
+                <a href="#" class="button action-primary action-save"> Save </a>
+            </li>
+            <li class="action-item">
+                <a href="#" class="button action-cancel"> Cancel </a>
+            </li>
+        </ul>
+    </div>
+</div>
